@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ProcessPayment</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Details</h1>
+    <form action="{{ url_for('ProcessPayment')}}"method="post">
+    	<input type="Number" name="Credit Card Number" placeholder="Credit Card Number" required="required" />
+        <input type="text" name="Name" placeholder="Name" required="required" />
+		<input type="text" name="Expirydate" placeholder="Expirydate" required="required" />
+    <input type="text" name="CVV" placeholder="CVV"  />
+    <input type="Number" name="Amount" placeholder="Amount" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
